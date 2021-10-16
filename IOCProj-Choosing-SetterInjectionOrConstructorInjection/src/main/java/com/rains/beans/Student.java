@@ -4,15 +4,15 @@ public class Student {
 	private int sNo;
 	private String sName, sAddress;
 
-	public void setsNo(int sNo) {
+	public void setSNo(int sNo) {
 		this.sNo = sNo;
 	}
 
-	public void setsName(String sName) {
+	public void setSName(String sName) {
 		this.sName = sName;
 	}
 
-	public void setsAddress(String sAddress) {
+	public void setSAddress(String sAddress) {
 		this.sAddress = sAddress;
 	}
 
