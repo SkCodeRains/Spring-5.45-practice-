@@ -12,6 +12,13 @@
 	</bean>
 
 
+	<bean id="mdrds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql:///Spring5" />
+		<property name="username" value="root" />
+		<property name="password" value="R007" />
+	</bean>
+
 	<!-- employee dao as beans -->
 	<bean id="dao" class="com.rains.dao.CustomerDAO">
 		<constructor-arg name="drds" ref="drds" />
