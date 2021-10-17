@@ -2,10 +2,11 @@ package com.rains.controller;
 
 import com.rains.dto.EmployeeDTO;
 import com.rains.service.EmployeeMgmtServiceImpl;
+import com.rains.service.IEmployeeMgmtService;
 import com.rains.vo.EmployeeVO;
 
 public class EmployeeController {
-	EmployeeMgmtServiceImpl service;
+	IEmployeeMgmtService service;
 
 	public EmployeeController(EmployeeMgmtServiceImpl service) {
 		super();
