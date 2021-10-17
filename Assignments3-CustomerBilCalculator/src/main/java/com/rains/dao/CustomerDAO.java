@@ -23,7 +23,6 @@ public class CustomerDAO implements ICustomerDAO {
 		CallableStatement cst = null;
 		int result = 0;
 
-		System.out.println(bo);
 		try {
 			con = drds.getConnection();
 			cst = con.prepareCall(FS_LAYERED_CUSTOMER_SINT);

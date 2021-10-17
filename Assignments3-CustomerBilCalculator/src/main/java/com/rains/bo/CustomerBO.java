@@ -54,7 +54,7 @@ public class CustomerBO {
 
 	@Override
 	public String toString() {
-		return "CustomerBO [custName=" + custName + ", custAddress=" + custAddress + ", time=" + time + ", rate=" + rate
+		return "Detailse [custName=" + custName + ", custAddress=" + custAddress + ", time=" + time + ", rate=" + rate
 				+ ", pAmt=" + pAmt + ", intrest=" + intrest + "]";
 	}
 
