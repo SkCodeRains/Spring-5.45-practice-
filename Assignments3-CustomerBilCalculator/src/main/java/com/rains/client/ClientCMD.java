@@ -2,18 +2,17 @@ package com.rains.client;
 
 import java.util.Scanner;
 
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.rains.controller.Controller;
 import com.rains.vo.CustomerVO;
 
 public class ClientCMD {
 	public static void main(String[] args) {
-		DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
-		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(factory);
-		reader.loadBeanDefinitions("com/rains/cfgs/ApplicationContext.xml");
-
+		// when using properties file
+		@SuppressWarnings("resource")
+		ClassPathXmlApplicationContext factory = new ClassPathXmlApplicationContext(
+				"com/rains/cfgs/ApplicationContext.xml");
 		// get Inputs from user
 		Scanner sc = new Scanner(System.in);
 
