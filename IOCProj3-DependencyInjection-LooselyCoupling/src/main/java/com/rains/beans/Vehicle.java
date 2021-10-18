@@ -4,7 +4,7 @@ public class Vehicle {
 	Engine e;
 
 	public Vehicle(Engine e) {
-		System.out.println("Vehicle 0-PARAM CONSTRUCTOR");
+		System.out.println("Vehicle 1-PARAM CONSTRUCTOR");
 		this.e = e;
 	}
 
