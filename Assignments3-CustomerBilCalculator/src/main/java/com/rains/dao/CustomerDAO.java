@@ -10,7 +10,7 @@ import com.rains.bo.CustomerBO;
 
 public class CustomerDAO implements ICustomerDAO {
 
-	DataSource drds;
+	public DataSource drds;
 
 	public CustomerDAO(DataSource drds) {
 		super();
