@@ -4,12 +4,17 @@ import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 //@Component("wmg")
+
 @Component
+
+@Scope("prototype")
+//@Lazy // it will disbale preinstantiation of singleton scop bean
 
 public class WishMessageGenerator {
 	// Field Injection
