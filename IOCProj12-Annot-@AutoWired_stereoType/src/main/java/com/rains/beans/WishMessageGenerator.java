@@ -5,9 +5,12 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component("wmg")
+//@Component("wmg")
+@Component
+
 public class WishMessageGenerator {
 	// Field Injection
 	@Autowired
