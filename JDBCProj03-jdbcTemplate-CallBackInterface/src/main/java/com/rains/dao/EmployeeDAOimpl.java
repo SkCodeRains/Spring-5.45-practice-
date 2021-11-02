@@ -28,7 +28,7 @@ public class EmployeeDAOimpl implements IEmployeeDAO {
 	@Autowired
 	JdbcTemplate jt;
 
-	//inner anonymous class lambda expression row map single row
+	// inner anonymous class lambda expression row map single row
 	@Override
 	public Employee getEmpDetailsById(int eno) {
 		return jt.queryForObject(GET_EMP_BY_EMPNO, (rs, rn) -> {
@@ -39,9 +39,7 @@ public class EmployeeDAOimpl implements IEmployeeDAO {
 			emp.setSal(rs.getFloat(4));
 			emp.setDeptno(rs.getInt(5));
 			return emp;
-		}
-
-				, eno);
+		}, eno);
 	}
 
 	// RowMapper as Anonymous inner class Lambda expression
@@ -81,11 +79,10 @@ public class EmployeeDAOimpl implements IEmployeeDAO {
 
 		return jt.query(GET_EMP_DETAILS_BY_DESG, new employeeExtractor(), desg);
 	}
+
 // Extractor inner class
 	private class employeeExtractor implements ResultSetExtractor<List<Employee>> {
 
-		
-		
 		@Override
 		public List<Employee> extractData(ResultSet rs) throws SQLException, DataAccessException {
 			List<Employee> employees = new ArrayList<Employee>();
@@ -121,7 +118,6 @@ public class EmployeeDAOimpl implements IEmployeeDAO {
 //
 //		}, eno);
 //	}
-
 
 //	@Override
 //	public Employee getEmpDetailsById(int eno) {
