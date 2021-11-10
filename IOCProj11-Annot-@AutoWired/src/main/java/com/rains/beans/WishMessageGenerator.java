@@ -4,7 +4,7 @@ import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
+
 
 public class WishMessageGenerator {
 	// Field Injection
@@ -16,7 +16,7 @@ public class WishMessageGenerator {
 	}
 
 	@Autowired
-	public WishMessageGenerator(@Qualifier("sd") Date d) {
+	public WishMessageGenerator(Date d) {
 		System.out.println(this.d);
 		this.d = d;
 		System.out.println("WishMessageGenerator.WishMessageGenerator()");
