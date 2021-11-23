@@ -26,7 +26,6 @@ public class AppConfig {
 		} catch (Exception e) {
 			System.out.println("ExceptionOccured :: " + e);
 		}
-
 		return dmds;
 	}
 }
